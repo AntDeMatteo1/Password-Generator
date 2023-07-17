@@ -10,14 +10,31 @@ var generateBtn = document.querySelector("#generate");
 
 //Add funtion
 
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+function options() {
 
-  passwordText.value = password;
+  var passwordLength = parseInt(window.prompt("How many characters would you like in your password? "));
 
+  if (!passwordLength) {
+    window.alert("Must enter a password length");
+    return;
+  }
+
+  if (passwordLength < 8 || passwordLength > 128) {
+    window.alert("Password needs to be within 8 and 128 characters please.");
+    return;
+  }
 }
+
+if (passwordLength)
+
+  // Write password to the #password input
+  function writePassword() {
+    var password = generatePassword();
+    var passwordText = document.querySelector("#password");
+
+    passwordText.value = password;
+
+  }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
