@@ -25,6 +25,17 @@ function options() {
   }
 }
 
+// Adding "If" variables
+
+var ifSpecialCharacters = window.confirm("Do you want to add Special Characters?");
+var ifNumbers = window.confirm("Do you want to add numbers?");
+var ifUpperCaseLetters = window.confirm("Do you want to add Upper Case Letters?");
+var ifLowerCaseCharacters = window.confirm("Do you want to add Lower Case Letters?");
+
+
+
+
+
 if (passwordLength)
 
   // Write password to the #password input
